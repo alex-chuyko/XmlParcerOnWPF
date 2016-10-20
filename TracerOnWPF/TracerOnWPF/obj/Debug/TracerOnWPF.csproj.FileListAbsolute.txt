@@ -1,0 +1,15 @@
+C:\Users\Александр\Documents\Visual Studio 2015\Projects\SPP\Lab3\TracerOnWPF\TracerOnWPF\bin\Debug\TracerOnWPF.exe.config
+C:\Users\Александр\Documents\Visual Studio 2015\Projects\SPP\Lab3\TracerOnWPF\TracerOnWPF\bin\Debug\TracerOnWPF.exe
+C:\Users\Александр\Documents\Visual Studio 2015\Projects\SPP\Lab3\TracerOnWPF\TracerOnWPF\bin\Debug\TracerOnWPF.pdb
+C:\Users\Александр\Documents\Visual Studio 2015\Projects\SPP\Lab3\TracerOnWPF\TracerOnWPF\obj\Debug\TracerOnWPF.csprojResolveAssemblyReference.cache
+C:\Users\Александр\Documents\Visual Studio 2015\Projects\SPP\Lab3\TracerOnWPF\TracerOnWPF\obj\Debug\View\MainWindow.g.cs
+C:\Users\Александр\Documents\Visual Studio 2015\Projects\SPP\Lab3\TracerOnWPF\TracerOnWPF\obj\Debug\App.g.cs
+C:\Users\Александр\Documents\Visual Studio 2015\Projects\SPP\Lab3\TracerOnWPF\TracerOnWPF\obj\Debug\TracerOnWPF_MarkupCompile.cache
+C:\Users\Александр\Documents\Visual Studio 2015\Projects\SPP\Lab3\TracerOnWPF\TracerOnWPF\obj\Debug\TracerOnWPF_MarkupCompile.lref
+C:\Users\Александр\Documents\Visual Studio 2015\Projects\SPP\Lab3\TracerOnWPF\TracerOnWPF\obj\Debug\View\MainWindow.baml
+C:\Users\Александр\Documents\Visual Studio 2015\Projects\SPP\Lab3\TracerOnWPF\TracerOnWPF\obj\Debug\TracerOnWPF.g.resources
+C:\Users\Александр\Documents\Visual Studio 2015\Projects\SPP\Lab3\TracerOnWPF\TracerOnWPF\obj\Debug\TracerOnWPF.Properties.Resources.resources
+C:\Users\Александр\Documents\Visual Studio 2015\Projects\SPP\Lab3\TracerOnWPF\TracerOnWPF\obj\Debug\TracerOnWPF.csproj.GenerateResource.Cache
+C:\Users\Александр\Documents\Visual Studio 2015\Projects\SPP\Lab3\TracerOnWPF\TracerOnWPF\obj\Debug\TracerOnWPF.exe
+C:\Users\Александр\Documents\Visual Studio 2015\Projects\SPP\Lab3\TracerOnWPF\TracerOnWPF\obj\Debug\TracerOnWPF.pdb
+C:\Users\Александр\Documents\Visual Studio 2015\Projects\SPP\Lab3\TracerOnWPF\TracerOnWPF\obj\Debug\GeneratedInternalTypeHelper.g.cs

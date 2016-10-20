@@ -1,0 +1,84 @@
+﻿<Window x:Class="TracerOnWPF.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TracerOnWPF.Commands"
+        xmlns:vm="clr-namespace:TracerOnWPF.ViewModel"
+        xmlns:model="clr-namespace:TracerOnWPF.Model"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="632" Width="1292">
+    <Window.DataContext>
+        <vm:UserDataContext />
+    </Window.DataContext>
+    <Window.InputBindings>
+        <KeyBinding Command="{Binding MyWindowViewModel.OpenFileCommand}" Gesture="CTRL+O" />
+        <KeyBinding Command="{Binding MyWindowViewModel.SaveFileCommand}" Gesture="CTRL+S" />
+        <KeyBinding Command="{Binding MyWindowViewModel.SaveAsFileCommand}" Gesture="CTRL+ALT+S" />
+        <KeyBinding Command="{Binding MyWindowViewModel.RemoveTab}" Gesture="CTRL+W" />
+        <KeyBinding Command="{Binding MyWindowViewModel.Exit}" Gesture="CTRL+Q" />
+    </Window.InputBindings>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="263*"/>
+            <ColumnDefinition Width="58*"/>
+        </Grid.ColumnDefinitions>
+        <Menu>
+            <MenuItem Header="File">
+                <MenuItem Header="Open" InputGestureText="Ctrl+O" Command="{Binding MyWindowViewModel.OpenFileCommand}"/>
+                <MenuItem Header="Save" InputGestureText="Ctrl+S" Command="{Binding MyWindowViewModel.SaveFileCommand}"/>
+                <MenuItem Header="Save as..." Command="{Binding MyWindowViewModel.SaveAsFileCommand}"/>
+                <Separator></Separator>
+                <MenuItem Header="Exit" InputGestureText="Ctrl+Q" Command="{Binding MyWindowViewModel.Exit}"/>
+            </MenuItem>
+            <MenuItem Header="Help" />
+        </Menu>
+        <TabControl Grid.Column="0"  Name="winTabControl" Margin="10,20,10,10" ItemsSource="{Binding Path=Tabs}">
+            <TabControl.DataContext>
+                <vm:TabsViewModel />
+            </TabControl.DataContext>
+            <TabControl.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Path=Header, Mode=TwoWay}" />
+                </DataTemplate>
+            </TabControl.ItemTemplate>
+            <TabControl.ContentTemplate>
+                <DataTemplate>
+                    <TreeView Name="lol" ItemsSource="{Binding Path=Items}" TreeViewItem.Selected="SelectItem">
+                        <TreeView.ItemTemplate>
+                            <HierarchicalDataTemplate ItemsSource="{Binding Path=Items}">
+                                <TextBlock Text="{Binding Path=Title}" />
+                            </HierarchicalDataTemplate>
+                        </TreeView.ItemTemplate>
+                        <TreeView.ItemContainerStyle>
+                            <Style TargetType="{x:Type TreeViewItem}">
+                                <Setter Property="IsExpanded" Value="True" />
+                            </Style>
+                        </TreeView.ItemContainerStyle>
+                    </TreeView>
+                </DataTemplate>
+            </TabControl.ContentTemplate>
+            <TabControl.ItemContainerStyle>
+                <Style TargetType="{x:Type TabItem}">
+                    <Setter Property="IsSelected" Value="True" />
+                </Style>
+            </TabControl.ItemContainerStyle>
+        </TabControl>
+
+        <StackPanel Grid.Column="1"  Margin="20">
+            <TextBlock Text="name:" />
+            <TextBox Name="Name" MaxLength="25" Text="{Binding Name}" Margin="0,0,0,10" IsEnabled="False"/>
+
+            <TextBlock Text="time:"/>
+            <TextBox Name="Time" MaxLength="5" Text="{Binding Time}" Margin="0,0,0,10" IsEnabled="False"/>
+
+            <TextBlock Text="package:" />
+            <TextBox Name="Package" MaxLength="25" Text="{Binding Package}" Margin="0,0,0,10" IsEnabled="False"/>
+
+            <TextBlock Text="paramsCount:"/>
+            <TextBox  Name="ParamsCount" MaxLength="2" Text="{Binding ParamsCount}" Margin="0,0,0,10" IsEnabled="False"/>
+
+            <Button Name="SaveBtn" Height="20" Width="50" Content="Save" IsEnabled="False" Click="SaveBtn_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
